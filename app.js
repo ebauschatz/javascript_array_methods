@@ -153,7 +153,7 @@ function problemOne(){
 }
 
 let veggieDishes = problemOne();
-//console.log("Vegetarian food from Problem 1", veggieDishes);
+console.log("Vegetarian food from Problem 1", veggieDishes);
 
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
@@ -173,9 +173,9 @@ function problemTwo(cuisineType) {
     return results;
 }
 
-// let userCuisineType = prompt("Please enter a cuisine type")
-// let cuisineDishes = problemTwo(userCuisineType);
-// console.log(`Dishes of cuisine type ${userCuisineType} from Problem 2`, cuisineDishes)
+let userCuisineType = prompt("Please enter a cuisine type")
+let cuisineDishes = problemTwo(userCuisineType);
+console.log(`Dishes of cuisine type ${userCuisineType} from Problem 2`, cuisineDishes)
 
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
@@ -196,7 +196,7 @@ function problemThree(){
 }
 
 let largeItalianDishes = problemThree();
-//console.log("Large Italian dishes from Problem 3", largeItalianDishes);
+console.log("Large Italian dishes from Problem 3", largeItalianDishes);
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
@@ -217,7 +217,7 @@ function problemFour(){
 }
 
 let dishResults = problemFour();
-//console.log("Results from Problem Four", dishResults);
+console.log("Results from Problem 4", dishResults);
 
 
 //5. Create a function that will return only dishes whose serving count is even.
@@ -238,7 +238,7 @@ function problemFive() {
 }
 
 let evenServingsDishes = problemFive();
-//console.log("Dishes with even serving numbers from Problem 5", evenServingsDishes);
+console.log("Dishes with even serving numbers from Problem 5", evenServingsDishes);
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
@@ -261,7 +261,7 @@ function problemSix() {
 }
 
 let chickpeaDishes = problemSix();
-//console.log("Dishes containing chickpeas from Problem 6", chickpeaDishes);
+console.log("Dishes containing chickpeas from Problem 6", chickpeaDishes);
 
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
@@ -281,9 +281,9 @@ function problemSeven(ingredient) {
     return results;
 }
 
-// let userIngredient = prompt("Please enter an ingredient");
-// let ingredientResults = problemSeven(userIngredient);
-// console.log(`Dishes containing ${userIngredient} from Problem 7`, ingredientResults);
+let userIngredient = prompt("Please enter an ingredient");
+let ingredientResults = problemSeven(userIngredient);
+console.log(`Dishes containing ${userIngredient} from Problem 7`, ingredientResults);
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
@@ -299,7 +299,7 @@ function problemEight() {
 }
 
 let cuisines = problemEight();
-//console.log("All cuisine types from Problem 8", cuisines);
+console.log("All cuisine types from Problem 8", cuisines);
 
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
@@ -315,7 +315,7 @@ function problemNine() {
 }
 
 let cuisineNames = problemNine();
-//console.log("Dish cuisine and name from Problem 9", cuisineNames);
+console.log("Dish cuisine and name from Problem 9", cuisineNames);
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
@@ -338,7 +338,8 @@ function problemTen() {
 }
 
 let veggieCuisineNames = problemTen();
-//console.log("Vegetarian dishes, cuisine and name from Problem 10", veggieCuisineNames);
+console.log("Vegetarian dishes, cuisine and name from Problem 10", veggieCuisineNames);
+
 
 //BONUS
 
@@ -362,7 +363,7 @@ function problemEightB() {
 }
 
 let uniqueCuisines = problemEightB();
-//console.log("Unique cuisines from Bonus 8b", uniqueCuisines);
+console.log("Unique cuisines from Bonus 8b", uniqueCuisines);
 
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
@@ -384,7 +385,7 @@ function bonusEleven() {
 }
 
 let eitherResults = bonusEleven();
-//console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
+console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
 
 
 //12. Create a function that will return the total serving count of all dishes.
@@ -400,7 +401,7 @@ function bonusTwelve() {
 }
 
 let totalServings = bonusTwelve();
-//console.log("Total servings from all dishes from Bonus 12", totalServings);
+console.log("Total servings from all dishes from Bonus 12", totalServings);
 
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
