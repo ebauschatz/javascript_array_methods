@@ -278,15 +278,25 @@ function problemSeven(ingredient) {
     return results;
 }
 
-let userIngredient = prompt("Please enter an ingredient");
-let ingredientResults = problemSeven(userIngredient);
-console.log(`Dishes containing ${userIngredient} from Problem 7`, ingredientResults);
+// let userIngredient = prompt("Please enter an ingredient");
+// let ingredientResults = problemSeven(userIngredient);
+//console.log(`Dishes containing ${userIngredient} from Problem 7`, ingredientResults);
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEight() {
+    let results;
+    results = dishes.map(function(element) {
+        return element.cuisine;
+    })
 
+    return results;
+}
+
+let cuisines = problemEight();
+console.log("All cuisine types from Problem 8", cuisines);
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
