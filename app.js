@@ -195,13 +195,28 @@ function problemThree(){
 }
 
 let largeItalianDishes = problemThree();
-console.log("Large Italian dishes from Problem 3", largeItalianDishes);
+//console.log("Large Italian dishes from Problem 3", largeItalianDishes);
 
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function problemFour(){
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.id === element.servings) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
 
+    return results;
+}
+
+let dishResults = problemFour();
+console.log("Results from Problem Four", dishResults);
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
