@@ -1,4 +1,4 @@
-
+"use strict";
 //The purpose of this Lab is to get a solid understanding of the .filter() and .map() advanced array methods.
 //These methods will be used extensively on future projects
 
@@ -217,7 +217,7 @@ function problemFour(){
 }
 
 let dishResults = problemFour();
-console.log("Results from Problem Four", dishResults);
+console.log("Results from Problem 4", dishResults);
 
 
 //5. Create a function that will return only dishes whose serving count is even.
@@ -340,15 +340,93 @@ function problemTen() {
 let veggieCuisineNames = problemTen();
 console.log("Vegetarian dishes, cuisine and name from Problem 10", veggieCuisineNames);
 
+
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+
+function problemEightB() {
+    let results;
+    results = dishes.map(function(element) {
+        return element.cuisine;
+    })
+    results = results.filter(function(element, index) {
+        if (index === results.indexOf(element)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let uniqueCuisines = problemEightB();
+console.log("Unique cuisines from Bonus 8b", uniqueCuisines);
+
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
 
+function bonusEleven() {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.ingredients.includes("tomato") || element.ingredients.includes("cheese")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let eitherResults = bonusEleven();
+console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
+
+
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
 
+function bonusTwelve() {
+    let results;
+    results = dishes.reduce(function(servingTotal, element) {
+        return servingTotal + element.servings
+    }, 0)
+
+    return results;
+}
+
+let totalServings = bonusTwelve();
+console.log("Total servings from all dishes from Bonus 12", totalServings);
+
+
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+function bonusThirteen() {
+    let results;
+    results = dishes.filter(function(element) {
+        let cuisineDishCount = dishes.reduce(function(count, el) {
+            if (element.cuisine === el.cuisine) {
+                return count + 1;
+            }
+            else {
+                return count
+            }
+        }, 0)
+        if (cuisineDishCount === 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let uniqueCuisineDishes = bonusThirteen();
+console.log("Dishes with unique cuisine types from Bonus 13", uniqueCuisineDishes);
