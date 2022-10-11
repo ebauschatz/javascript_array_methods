@@ -311,13 +311,29 @@ function problemNine() {
 }
 
 let cuisineNames = problemNine();
-console.log("Dish cuisine and name from Problem 9", cuisineNames);
+//console.log("Dish cuisine and name from Problem 9", cuisineNames);
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
+function problemTen() {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.cuisine === "Vegetarian") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+    results = results.map(function(element) {
+        return element.cuisine + ' ' + element.name;
+    })
 
+    return results;
+}
 
-
+let veggieCuisineNames = problemTen();
+console.log("Vegetarian dishes, cuisine and name from Problem 10", veggieCuisineNames);
 
 //BONUS
 
