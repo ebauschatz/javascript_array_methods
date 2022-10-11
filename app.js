@@ -400,7 +400,32 @@ function bonusTwelve() {
 }
 
 let totalServings = bonusTwelve();
-console.log("Total servings from all dishes from Bonus 12", totalServings);
+//console.log("Total servings from all dishes from Bonus 12", totalServings);
 
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+
+function bonusThirteen() {
+    let results;
+    results = dishes.filter(function(element) {
+        let cuisineDishCount = dishes.reduce(function(count, el) {
+            if (element.cuisine === el.cuisine) {
+                return count + 1;
+            }
+            else {
+                return count
+            }
+        }, 0)
+        if (cuisineDishCount === 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let uniqueCuisineDishes = bonusThirteen();
+console.log("Dishes with unique cuisine types from Bonus 13", uniqueCuisineDishes);
