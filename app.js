@@ -153,11 +153,28 @@ function problemOne(){
 }
 
 let veggieDishes = problemOne();
-console.log("Vegetarian food from Problem 1", veggieDishes);
+//console.log("Vegetarian food from Problem 1", veggieDishes);
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
 
+function problemTwo(cuisineType) {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.cuisine === cuisineType) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let userCuisineType = prompt("Please enter a cuisine type")
+let cuisineDishes = problemTwo(userCuisineType);
+console.log(`Dishes of cuisine type ${userCuisineType} from Problem 2`, cuisineDishes)
 
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
