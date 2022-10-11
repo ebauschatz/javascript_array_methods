@@ -362,11 +362,29 @@ function problemEightB() {
 }
 
 let uniqueCuisines = problemEightB();
-console.log("Unique cuisines from Bonus 8b", uniqueCuisines);
+//console.log("Unique cuisines from Bonus 8b", uniqueCuisines);
+
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+
+function bonusEleven() {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.ingredients.includes("tomato") || element.ingredients.includes("cheese")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let eitherResults = bonusEleven();
+console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
