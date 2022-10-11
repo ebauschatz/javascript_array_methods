@@ -259,11 +259,28 @@ function problemSix() {
 }
 
 let chickpeaDishes = problemSix();
-console.log("Dishes containing chickpeas from Problem 5", chickpeaDishes);
+//console.log("Dishes containing chickpeas from Problem 6", chickpeaDishes);
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
+function problemSeven(ingredient) {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.ingredients.includes(ingredient)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let userIngredient = prompt("Please enter an ingredient");
+let ingredientResults = problemSeven(userIngredient);
+console.log(`Dishes containing ${userIngredient} from Problem 7`, ingredientResults);
 
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
