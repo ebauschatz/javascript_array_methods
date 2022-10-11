@@ -216,11 +216,27 @@ function problemFour(){
 }
 
 let dishResults = problemFour();
-console.log("Results from Problem Four", dishResults);
+//console.log("Results from Problem Four", dishResults);
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+function problemFive() {
+    let results;
+    results = dishes.filter(function(element) {
+        if (element.servings % 2 === 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let evenServingsDishes = problemFive();
+console.log("Dishes with even serving numbers from Problem 5", evenServingsDishes);
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
