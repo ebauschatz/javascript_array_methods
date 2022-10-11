@@ -384,9 +384,23 @@ function bonusEleven() {
 }
 
 let eitherResults = bonusEleven();
-console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
+//console.log("Dishes with either tomato or cheese from Bonus 11", eitherResults);
+
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
+
+function bonusTwelve() {
+    let results;
+    results = dishes.reduce(function(servingTotal, element) {
+        return servingTotal + element.servings
+    }, 0)
+
+    return results;
+}
+
+let totalServings = bonusTwelve();
+console.log("Total servings from all dishes from Bonus 12", totalServings);
+
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
